@@ -1,0 +1,144 @@
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  width: 100%;
+  height: 150px;
+
+  box-sizing: border-box;
+
+  background: #FFFFFF;
+
+  border: 1.5px solid #DDE7E3;
+  border-radius: 10px;
+
+  padding: 12px 12px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.service-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #146C5A;
+
+  box-shadow: 0 8px 22px rgba(20, 108, 90, 0.14);
+}
+
+
+/* =========================================
+   LARGE ICON
+========================================= */
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4px;
+
+  color: #146C5A;
+}
+
+.service-icon svg {
+  width: 58px;
+  height: 58px;
+
+  stroke-width: 1.7;
+}
+
+
+/* =========================================
+   SERVICE NAME
+========================================= */
+
+.service-card h3 {
+  width: 100%;
+
+  margin: 0;
+
+  color: #17201E;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   BOTTOM ROW
+========================================= */
+
+.service-bottom {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 0 3px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.service-bottom span {
+  color: #17201E;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.service-bottom svg {
+  width: 19px;
+  height: 19px;
+
+  color: #146C5A;
+
+  stroke-width: 2;
+}
+
+
+/* =========================================
+   HOVER ARROW
+========================================= */
+
+.service-card:hover .service-bottom svg {
+  transform: translateX(3px);
+  transition: transform 0.2s ease;
+}

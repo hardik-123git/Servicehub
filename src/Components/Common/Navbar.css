@@ -1,0 +1,602 @@
+.navbar {
+  height: 72px;
+  border-bottom: 1px solid #eeeeee;
+  background: white;
+}
+/* =========================================
+   COLOR PALETTE
+========================================= */
+
+:root {
+  --primary: #146C5A;
+  --primary-dark: #0B4F43;
+  --accent: #39BFA7;
+
+  --background: #F8FAF9;
+  --card: #FFFFFF;
+
+  --text: #17201E;
+  --secondary-text: #66736F;
+
+  --success: #22A06B;
+  --warning: #F59E0B;
+  --error: #DC4C4C;
+
+  --border: #E3EAE7;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+
+  background: var(--card);
+
+  border-bottom: 1px solid var(--border);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* =========================================
+   NAVBAR CONTAINER
+========================================= */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+/* =========================================
+   LOGO SECTION
+========================================= */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 205px;
+}
+
+
+/* Logo Image */
+
+.logo-section img {
+  width: 72px;
+  height: 44px;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 0;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* Logo Text */
+
+.logo-section h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+
+/* Tagline */
+
+.logo-section span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--secondary-text);
+
+  font-size: 9px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 27px;
+
+  flex: 1;
+}
+
+
+/* Individual links */
+
+.nav-links a {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+
+/* Active link */
+
+.nav-links a.active {
+  color: var(--primary);
+}
+
+
+/* Active underline */
+
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background: var(--primary);
+
+  border-radius: 3px 3px 0 0;
+}
+
+
+/* =========================================
+   RIGHT SECTION
+========================================= */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOCATION BUTTON
+========================================= */
+
+.location-btn {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 13px;
+
+  background: var(--card);
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  border-radius: 22px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+/* Location icon */
+
+.location-btn svg:first-child {
+  color: var(--primary);
+}
+
+
+/* Location arrow */
+
+.location-btn svg:last-child {
+  color: var(--secondary-text);
+}
+
+
+/* Location hover */
+
+.location-btn:hover {
+  border-color: var(--primary);
+
+  background: #f5faf8;
+}
+
+
+/* =========================================
+   NOTIFICATION BUTTON
+========================================= */
+
+.notification-btn {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+
+  color: var(--text);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.notification-btn:hover {
+  background: #f0f6f4;
+
+  color: var(--primary);
+}
+
+
+/* Notification number */
+
+.notification-count {
+  position: absolute;
+
+  top: 1px;
+  right: 0px;
+
+  min-width: 15px;
+  height: 15px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary);
+
+  color: white;
+
+  border: 2px solid white;
+
+  border-radius: 50%;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-btn {
+  height: 38px;
+
+  padding: 0 15px;
+
+  background: var(--card);
+
+  color: var(--primary-dark);
+
+  border: 1px solid #B8D7CD;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.login-btn:hover {
+  background: #F0F7F4;
+
+  border-color: var(--primary);
+
+  color: var(--primary);
+}
+
+
+/* =========================================
+   SIGN UP BUTTON
+========================================= */
+
+.signup-btn {
+  height: 38px;
+
+  padding: 0 17px;
+
+  background: var(--primary);
+
+  color: white;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.signup-btn:hover {
+  background: var(--primary-dark);
+
+  border-color: var(--primary-dark);
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  color: var(--text);
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+
+.mobile-menu-btn:hover {
+  background: #F0F6F4;
+
+  color: var(--primary);
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar-container {
+    padding: 0 25px;
+
+    gap: 20px;
+  }
+
+  .logo-section {
+    min-width: auto;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .location-btn {
+    padding: 0 10px;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    height: 68px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+
+    justify-content: space-between;
+  }
+
+
+  /* Hide desktop right section */
+
+  .nav-right {
+    display: none;
+  }
+
+
+  /* Hide normal navigation */
+
+  .nav-links {
+    position: absolute;
+
+    top: 68px;
+    left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    padding: 20px;
+
+    background: var(--card);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 8px 20px rgba(23, 32, 30, 0.08);
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+  }
+
+
+  /* Open mobile menu */
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
+
+
+  /* Mobile links */
+
+  .nav-links a {
+    height: auto;
+
+    padding: 15px 10px;
+
+    border-bottom: 1px solid #EEF2F0;
+
+    font-size: 14px;
+  }
+
+
+  /* Remove desktop underline */
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+
+  /* Active mobile link */
+
+  .nav-links a.active {
+    background: #F0F7F4;
+
+    color: var(--primary);
+
+    border-radius: 6px;
+  }
+
+
+  /* Show mobile menu */
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 64px;
+  }
+
+  .navbar-container {
+    padding: 0 15px;
+  }
+
+.logo-section img {
+  width: 62px;
+  height: 38px;
+  object-fit: contain;
+  object-position: center;
+}
+
+  .logo-section h2 {
+    font-size: 18px;
+  }
+
+  .logo-section span {
+    font-size: 8px;
+  }
+
+  .nav-links {
+    top: 64px;
+  }
+
+}
